@@ -1,0 +1,11 @@
+{
+  "name": "the_uncle",
+  "version": "1.0.0",
+  "description": "\"My portofolio website\"",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch ./style/main.scss:./style/main.css --style compressed"
+  },
+  "author": "Uncle Sam",
+  "license": "ISC"
+}

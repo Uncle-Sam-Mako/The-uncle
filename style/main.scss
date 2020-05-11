@@ -1,0 +1,194 @@
+/*Reset CSS(http://meyerweb.com/eric/tools/css/reset/) v2.0 | 20110126 License: none (public domain)
+===========================================================*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+/*=========================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Fredoka+One&family=Pacifico&family=Roboto&display=swap');
+/*=========Variables & mixins ==========*/
+$shadow-color: #181818;
+html, body, .home{
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+.home{
+    display: grid;
+    grid-template-columns: 7% 1fr 3%;
+    grid-template-rows: 1fr;
+}
+.navbar{
+    grid-column: 1;
+    grid-row: 1;
+    background: #202020;
+    box-shadow: 5px 0px 20px $shadow-color;
+    &__items-container{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    &__item{
+        margin: 10px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+        a{
+            color: gray;
+            display: block;
+            width: 100%;
+            padding: 20px 0;
+            position: relative;
+            transform: translateX(0);
+            text-decoration: none;
+            line-height: 25px;
+            i{
+                font-size: 1.5em;
+                transition: display ease 0.6s;
+            }
+            p{
+                display: none;
+                transition: display ease 0.6s;
+            }
+            &.active{
+                background: #bebebe;
+                color: #eee;
+            }
+            &:hover{
+                color: #eee;
+            }
+            &:hover::before{
+                transform: scaleX(1);
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                z-index: -1;
+                transform: scaleX(0);
+                transform-origin: 0 0;
+                background-color: #668fff;
+                transition: transform ease 0.6s;
+            }
+        }
+    }
+}
+.main{
+    grid-column: 2;
+    grid-row: 1;
+    background: #2c2c2c;
+    padding: 20px;
+    .greet{
+        color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font:{
+            family: 'Pacifico', cursive;
+        }
+        &__hello{
+            font-size: 2.5em;
+        }
+        &__name{
+            color: #668fff;
+            font-size: 6em;
+            text-shadow: 0px 2px 10px $shadow-color;
+        }
+        &__work{
+            text-transform: uppercase;
+            text-align: right;
+            font:{
+                family: 'Roboto', sans-serif;
+                size: 0.7em;
+            }
+            letter-spacing: 0.3em;
+            color: #7e7e7e;
+            margin: 15px 0;
+        }
+    }
+}
+.social-col{
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    background: #2c2c2c;
+    .social-items{
+        width: 100%;
+        background-color: black;
+        border-radius: 5px;
+        a{
+            line-height: 2em;
+            color: #eee;
+            text-align: center;
+            display: block;
+            padding: 10px 0; 
+            &:hover{
+                &.facebook_link{
+                    background-color: #3b5998;
+                }
+                &.twitter_link{
+                    background-color: #00acee;
+                }
+                &.linkedin_link{
+                    background-color: #0e76a8;
+                }
+                &.github_link{
+                    background-color: #1d1d1d;
+                }
+
+            }
+        }
+    }
+}
+img{
+    width: 100%;
+}
