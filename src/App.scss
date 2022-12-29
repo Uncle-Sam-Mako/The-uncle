@@ -4,21 +4,18 @@ $primary-color : #ffd700;
 @import 'animate.css';
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./assets/fonts/helvetica/HelveticaNeue.ttf')
-  format(ttf);
+  font-family: "Helvetica Neue";
+  src: url("assets/fonts/helvetica/HelveticaNeue\ Medium.ttf");
 }
 
 @font-face {
-  font-family: 'La Belle Aurore';
-  src: url('./assets/fonts/LaBelleAurore-Regular.ttf')
-  format(ttf);
+  font-family: "La Belle Aurore";
+  src: url("assets/fonts/LaBelleAurore-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'Coolvetica';
-  src: url('./assets/fonts/coolvetica_condensed_rg.otf')
-  format(otf);
+  font-family: "Coolvetica";
+  src: url("assets/fonts/coolvetica_condensed_rg.otf");
 }
 
 input,
