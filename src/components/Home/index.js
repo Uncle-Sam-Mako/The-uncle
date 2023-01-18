@@ -7,7 +7,7 @@ import './index.scss';
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate');
-    const nameArray = ['U','n','c','l','e','S','a','m'];
+    const nameArray = ['U','n','c','l','e',' ', 'S','a','m'];
     const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r'];
 
     useEffect(() => {
@@ -33,6 +33,7 @@ const Home = () => {
                 <h2>Frontend Developer | Javascript Expert | Designer</h2>
                 <Link to="/contact" className="flat-button">CONTACT ME</Link>
             </div>
+            
         </div>
     )
 }

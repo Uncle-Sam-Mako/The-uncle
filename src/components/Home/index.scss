@@ -10,9 +10,9 @@
 
     h1 {
         color: #fff;
-        font-size: 53px;
+        font-size: 45px;
         margin: 0;
-        font-family: 'Coolvetica';
+        font-family: "Helvetica Neue";
         font-weight: 400;
         &::before{
             content: "<h1>";
@@ -58,7 +58,7 @@
         border: 1px solid #ffd700;
         margin-top: 25px;
         float: left;
-        animation: fadeIN 1s 1.5s backwards;
+        animation: fadeIn 1s 1.5s backwards;
         white-space: nowrap;
         transition: .6s;
 
