@@ -17,13 +17,12 @@
             animation-fill-mode: forwards;
         }
 
-        li.half {
-            width: 49%;
-            margin-left: 2%;
-            float: left;
-            clear: none; 
-            &:first-child {
-                margin-left: 0;
+        span.group {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: 49%;
             }
         }
     }

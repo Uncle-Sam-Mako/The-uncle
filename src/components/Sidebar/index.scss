@@ -86,6 +86,11 @@
                     content: 'CONTACT';
                 }
             }
+            &.work-link {
+                &::after {
+                    content: 'WORK';
+                }
+            }
             &.active {
                svg {
                 color: #ffd700;
