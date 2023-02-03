@@ -1,3 +1,6 @@
+@import '../../variables';
+
+
 .contact-form {
     width: 100%;
     margin-top: 20px;
@@ -31,7 +34,7 @@
     input[type="email"] {
         width: 100%;
         border: 0;
-        background-color: #115173;
+        background-color: lighten($primary-color, 8%);;
         height: 50px;
         font-size: 16px;
         color: #fff;
@@ -42,7 +45,7 @@
     textarea {
         width: 100%;
         border: 0;
-        background: #115173;
+        background: lighten($primary-color, 8%);
         font-size: 16px;
         color: #fff;
         padding: 20px;
@@ -51,13 +54,13 @@
     }
 
     .flat-button {
-        color: #ffd700;
+        color: $secondary-color;
         background: 0 0;
         font: 11px;
         letter-spacing: 3px;
         text-decoration: none;
         padding: 8px 10px;
-        border: 1px solid #ffd700;
+        border: 1px solid $secondary-color;
         float: right;
         border-radius: 4px; 
     }

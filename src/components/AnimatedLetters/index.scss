@@ -1,3 +1,5 @@
+@import '../../variables';
+
 
 .text-animate {
     display: inline-block;
@@ -15,7 +17,7 @@
 
     &:hover {
         animation: jello 1s;
-        color: #ffd700;
+        color: $secondary-color;
     }
 }
 

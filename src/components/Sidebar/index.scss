@@ -1,3 +1,6 @@
+@import '../../variables';
+
+
 .nav-bar {
     background: #181818;
     width : 60px;
@@ -48,7 +51,7 @@
             }
 
             &:hover {
-                color: #ffd700;
+                color: $secondary-color;
 
                 svg {
                     opacity: 0;
@@ -93,7 +96,7 @@
             }
             &.active {
                svg {
-                color: #ffd700;
+                color: $secondary-color;
                } 
             }
         }
@@ -118,7 +121,7 @@
                 color: #4d4d4e;
 
                 &:hover svg {
-                    color: #ffd700; 
+                    color: $secondary-color; 
                 }
             }
         }
