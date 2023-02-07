@@ -1,0 +1,17 @@
+
+#logo {
+    animation: logo-fill 2s ease forwards 3s;
+
+    path {
+        animation: logo-anim ease forwards 3s;
+        &:nth-child(1) {
+            stroke-dasharray: 1152;
+            stroke-dashoffset: 1152;
+            
+        } 
+        &:nth-child(2) {
+            stroke-dasharray: 1333;
+            stroke-dashoffset: 1333;
+        } 
+    }
+}

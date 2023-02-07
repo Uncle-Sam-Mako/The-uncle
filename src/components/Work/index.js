@@ -34,13 +34,14 @@ const Work = () => {
                     </p>
                 </div>
                 <div className="projects-container">
+                {/* project slide with splidejs*/}
                 <Splide
                     options={ {
                         rewind: false,
                         width : '100%',
                         gap   : '1rem',
                         type   : 'loop',
-                        perPage: 4,
+                        perPage: 4, 
                         perMove : 1,
                         pagination : false
                     } }
@@ -137,9 +138,9 @@ const Work = () => {
                     </SplideSlide>
                 </Splide>
                     
-                    
                 </div>
             </div>
+            {/* Loader from react-loaders*/}
             <Loader type="pacman"/>
         </>
     )

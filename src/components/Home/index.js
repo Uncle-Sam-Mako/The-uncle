@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AnimatedLetters from "../AnimatedLetters";
 import './index.scss';
 import Loader from 'react-loaders'
+import homeImg from '../../assets/images/home_img.png'
 
 
 
@@ -34,6 +35,11 @@ const Home = () => {
                     </h1>
                     <h2>Frontend Developer | Javascript Expert | Designer</h2>
                     <Link to="/contact" className="flat-button">CONTACT ME</Link>
+                </div>
+                <div className="home-img-container">
+                    <div className="home-img">
+                        <img src={homeImg} alt="My portfolio image" />
+                    </div>
                 </div>
             </div>
             <Loader type="pacman"/>

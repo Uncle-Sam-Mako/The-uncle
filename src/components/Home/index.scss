@@ -2,74 +2,89 @@
 
 
 .home-page {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90%;
+    max-height: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    .text-animate-hover:hover {
+        color : $secondary-color;
+    }
+
+
     .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 40%;
-        max-height: 90%;
-    }
-
-    h1 {
-        color: #fff;
-        font-size: 45px;
-        margin: 0;
-        font-family: "Helvetica Neue";
-        font-weight: 400;
-        &::before{
-            content: "<h1>";
-            font-family: "La Belle Aurore";
+        h1 {
+            color: #fff;
+            font-size: 45px;
+            margin: 0;
+            font-family: "Helvetica Neue";
+            font-weight: 400;
+            &::before{
+                content: "<h1>";
+                font-family: "La Belle Aurore";
+                color: $secondary-color;
+                font-size: 18px;
+                position: absolute;
+                margin-top: -40px;
+                left: 15px;
+                opacity: 0.6;
+            }
+            &::after{
+                content: "</h1>";
+                font-family: "La Belle Aurore";
+                color: $secondary-color;
+                font-size: 18px;
+                position: absolute;
+                margin-top: 18px;
+                margin-left: 20px;
+                animation: fadeIn 1s 1.7s backwards;
+                opacity: 0.6;
+            }
+        }
+    
+        h2 {
+            color: #8d8d8d;
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 11px;
+            font-family: sans-serif;
+            letter-spacing: 3px;
+            animation: fadeIn 1s 1.8s backwards;
+        }
+    
+        .flat-button{
             color: $secondary-color;
-            font-size: 18px;
-            position: absolute;
-            margin-top: -40px;
-            left: 15px;
-            opacity: 0.6;
-        }
-        &::after{
-            content: "</h1>";
-            font-family: "La Belle Aurore";
-            color: $secondary-color;
-            font-size: 18px;
-            position: absolute;
-            margin-top: 18px;
-            margin-left: 20px;
-            animation: fadeIn 1s 1.7s backwards;
-            opacity: 0.6;
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            font-family: sans-serif;
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid $secondary-color;
+            margin-top: 25px;
+            float: left;
+            animation: fadeIn 1s 1.5s backwards;
+            white-space: nowrap;
+            transition: .6s;
+    
+            &:hover {
+                background: $secondary-color;
+                color : #333;
+    
+            }
+    
         }
     }
 
-    h2 {
-        color: #8d8d8d;
-        margin-top: 20px;
-        font-weight: 400;
-        font-size: 11px;
-        font-family: sans-serif;
-        letter-spacing: 3px;
-        animation: fadeIn 1s 1.8s backwards;
-    }
+    .home-img-container {
+        justify-self: flex-end;
 
-    .flat-button{
-        color: $secondary-color;
-        font-size: 13px;
-        font-weight: 400;
-        letter-spacing: 4px;
-        font-family: sans-serif;
-        text-decoration: none;
-        padding: 10px 18px;
-        border: 1px solid $secondary-color;
-        margin-top: 25px;
-        float: left;
-        animation: fadeIn 1s 1.5s backwards;
-        white-space: nowrap;
-        transition: .6s;
-
-        &:hover {
-            background: $secondary-color;
-            color : #333;
-
-        }
-
+        // img {
+        //     width: 50%;
+        // }
     }
 }
