@@ -83,8 +83,22 @@
     .home-img-container {
         justify-self: flex-end;
 
-        // img {
-        //     width: 50%;
-        // }
+        .home-img {
+            position: relative;
+
+           img {
+                display: block;
+                opacity: 0;
+                filter: drop-shadow(0px 0px 0 lighten($primary-color, 10%));
+                animation : fadeInUp 2s forwards 3s, dropShadow 2s forwards 6s;
+            }
+
+        }
+    }
+}
+
+@keyframes dropShadow {
+    to {
+        filter: drop-shadow(25px 10px 0 lighten($primary-color, 10%));
     }
 }

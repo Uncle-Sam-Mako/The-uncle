@@ -4,6 +4,7 @@ import AnimatedLetters from "../AnimatedLetters";
 import './index.scss';
 import Loader from 'react-loaders'
 import homeImg from '../../assets/images/home_img.png'
+import AnimatedLogo from "../AnimatedLogo";
 
 
 
@@ -41,10 +42,14 @@ const Home = () => {
                         <img src={homeImg} alt="My portfolio image" />
                     </div>
                 </div>
+                <div className="animated-logo-container">
+                    <AnimatedLogo></AnimatedLogo>
+                </div>
             </div>
             <Loader type="pacman"/>
         </>
     )
 }
+
 
 export default Home;

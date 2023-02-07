@@ -1,9 +1,11 @@
 
 #logo {
-    animation: logo-fill 2s ease forwards 3s;
+    animation: logoFill 2s ease forwards 9s;
 
     path {
-        animation: logo-anim ease forwards 3s;
+        filter: blur(5px), drop-shadow(0px 0px 5px red);
+        animation: logoAnim ease forwards 3s 6s;
+
         &:nth-child(1) {
             stroke-dasharray: 1152;
             stroke-dashoffset: 1152;
@@ -13,5 +15,21 @@
             stroke-dasharray: 1333;
             stroke-dashoffset: 1333;
         } 
+    }
+}
+
+@keyframes logoAnim {
+    to {
+        stroke-dashoffset: 0;
+        filter: blur(0), drop-shadow(none);
+    }
+}
+
+@keyframes logoFill {
+    from {
+        fill : transparent;
+    }
+    to {
+        fill : white;
     }
 }
