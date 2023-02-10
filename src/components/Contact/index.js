@@ -3,6 +3,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import AnimatedLogo from '../AnimatedLogo';
 
 
 
@@ -68,7 +69,9 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
-                
+                <div className="animated-logo">
+                    <AnimatedLogo></AnimatedLogo>
+                </div>
             </div>
             <Loader type="pacman"></Loader>
         </>

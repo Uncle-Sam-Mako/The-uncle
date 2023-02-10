@@ -1,6 +1,22 @@
 @import '../../variables';
 
 
+.contact-page {
+    width: 90%;
+    margin-left: 10%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+
+    .animated-logo {
+        #logo {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
 .contact-form {
     width: 100%;
     margin-top: 20px;
