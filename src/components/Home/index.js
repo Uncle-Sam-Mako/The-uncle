@@ -42,9 +42,7 @@ const Home = () => {
                         <img src={homeImg} alt="My portfolio image" />
                     </div>
                 </div>
-                <div className="animated-logo-container">
-                    <AnimatedLogo></AnimatedLogo>
-                </div>
+                
             </div>
             <Loader type="pacman"/>
         </>

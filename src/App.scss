@@ -19,12 +19,16 @@ $primary-color : white;
   src: url("assets/fonts/coolvetica_rg.ttf");
 }
 
+* {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
 input,
 textarea {
   font-family: 'Helvetica Neue';
 }
-
-
 
 
 .loader-active {

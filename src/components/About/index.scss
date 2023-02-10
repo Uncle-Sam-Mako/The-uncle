@@ -1,6 +1,15 @@
 @import '../../variables';
 
 
+.about-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+
 .stage-cube-container {
     width: 50%;
     height: 100%;
@@ -77,5 +86,15 @@
     }
     83% {
         transform: rotateY(90deg);
+    }
+}
+
+@media screen and (max-width : 1300px){
+    .about-page  {
+        grid-template-columns: 1fr;
+
+        .stage-cube-container {
+            position: relative;
+        }
     }
 }

@@ -3,12 +3,14 @@
 
 .nav-bar {
     background: #181818;
-    width : 60px;
+    width : 100%;
     height: 100%;
-    position: absolute;
-    top : 0;
-    z-index: 3;
-    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    
 
     .logo{
         display: block;
@@ -31,10 +33,6 @@
     nav {
         display : block;
         text-align: center;
-        position: absolute;
-        height: 210px;
-        top: 50%;
-        margin-top: -120px;
         width: 100%;
 
         a {
@@ -103,9 +101,7 @@
     }
 
     ul {
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
+
         display: block;
         padding: 0;
         list-style: none;
@@ -125,5 +121,11 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width : 640px){
+    .nav-bar {
+        display: none;
     }
 }

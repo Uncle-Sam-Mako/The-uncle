@@ -2,14 +2,10 @@
 
 
 .home-page {
-    position: absolute;
-    left: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 90%;
-    max-height: 90%;
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 100% ;
     align-items: center;
     .text-animate-hover:hover {
         color : $secondary-color;
@@ -19,7 +15,7 @@
     .text-zone {
         h1 {
             color: #fff;
-            font-size: 45px;
+            font-size: calc(2rem + 2vw);
             margin: 0;
             font-family: "Helvetica Neue";
             font-weight: 400;
@@ -81,14 +77,23 @@
     }
 
     .home-img-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
         justify-self: flex-end;
 
         .home-img {
-            position: relative;
-
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: calc(100vh - 100%);
+            
            img {
+                object-fit: contain;
+                max-height: 100%;
                 display: block;
                 opacity: 0;
+                transform: translateY(-150px);
                 filter: drop-shadow(0px 0px 0 lighten($primary-color, 10%));
                 animation : fadeInUp 2s forwards 3s, dropShadow 2s forwards 6s;
             }
@@ -100,5 +105,21 @@
 @keyframes dropShadow {
     to {
         filter: drop-shadow(25px 10px 0 lighten($primary-color, 10%));
+    }
+}
+
+
+@media screen and (max-width : 1300px){
+    .home-page  {
+        grid-template-columns: 1fr;
+
+        h1 {
+            font-size: calc(2rem + 3vw);
+        }
+
+        .home-img-container, 
+        .animated-logo-container{
+            display: none;
+        }
     }
 }
