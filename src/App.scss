@@ -22,6 +22,11 @@ $primary-color : white;
 * {
   box-sizing: border-box;
 }
+
+body, html {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
 }

@@ -5,6 +5,13 @@
     display: grid;
     grid-template-columns: 75px 1fr;
     grid-template-rows: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .top-tags  {
@@ -109,3 +116,9 @@
     }
 }
 
+
+@media screen and (max-width : 640px){
+    .app {
+        grid-template-columns: 1fr;
+    }
+}
