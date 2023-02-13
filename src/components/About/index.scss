@@ -11,14 +11,9 @@
 }
 
 .stage-cube-container {
-    width: 50%;
+    width: 100%;
     height: 100%;
-    top: 10%;
-    padding-top: 10%;
-    margin-left: 0;
-    position: absolute;
-    right: 0;
-    overflow: hidden;
+    position: relative;
 }
 
 .cubespinner {
@@ -29,6 +24,9 @@
     transform-style: preserve-3d;
     transform-origin: 100px 100px 0;
     margin-left: calc(50% - 100px);
+    position: absolute;
+    top: calc(50% - 100px);
+
 
     div {
         position: absolute;
@@ -91,10 +89,14 @@
 
 @media screen and (max-width : 1300px){
     .about-page  {
-        grid-template-columns: 1fr;
+        display: block;
 
         .stage-cube-container {
-            position: relative;
+            .cubespinner {
+                position: relative;
+                margin-top: 80px;
+                margin-bottom: 80px;
+            }
         }
     }
 }
