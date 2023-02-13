@@ -1,13 +1,16 @@
 import { Outlet } from 'react-router-dom';
+import React, { useState } from 'react';
 import Hamburger from '../Hamburger';
 import Sidebar from '../Sidebar';
 import './index.scss';
 
 const Layout = () => {
+    const [menuIsOpen, setMenuIsOpen] = useState(false); 
+
     return (
         <div className="app">
-            <Hamburger></Hamburger>
-            <Sidebar></Sidebar>
+            <Hamburger menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen}></Hamburger>
+            <Sidebar menuIsOpen={menuIsOpen} setMenuIsOpen={setMenuIsOpen}></Sidebar>
             <div className="page">
                 <span className="tags top-tags">&lt;body&gt;</span>
 

@@ -1,12 +1,25 @@
 import './index.scss';
+import React, { useState } from 'react';
 import Logo from '../../assets/images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHome, faUser, faEnvelope, faCode, faBars} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub, faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
-const Sidebar = () => {
+
+
+
+const Sidebar = ({menuIsOpen, setMenuIsOpen}) => {
+    
+    document.querySelectorAll("#nav-bar a").forEach(elt => {
+        elt.addEventListener('click', () => {
+            setMenuIsOpen(!menuIsOpen);
+        })
+    })
+    
+
+
     return (
-        <div className="nav-bar">
+        <div id="nav-bar" className={`nav-bar ${ menuIsOpen ? "active" : "" }`}>
             <Link className="logo" to='/'>
                 <img src={Logo} alt="logo" />
             </Link>

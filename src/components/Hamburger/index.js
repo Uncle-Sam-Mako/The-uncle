@@ -1,18 +1,25 @@
 import './index.scss'
+import React, { useState } from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faBars} from '@fortawesome/free-solid-svg-icons'
+const HamburgerButton = ({menuIsOpen, setMenuIsOpen}) => {
 
 
+    const handleClick = () => {
+        setMenuIsOpen(!menuIsOpen);
+        document.getElementById('hamburger-button').classList.toggle('open');
+        document.getElementById('nav-bar').classList.toggle('active');
+    };
 
-const Hamburger = () => {
     return (
         <div className="hamburger-container">
-            <button id="hamburger">
-                <FontAwesomeIcon icon={faBars} color="#fff" ></FontAwesomeIcon>
-            </button>
+            <div id="hamburger-button" className="hamburger-button" onClick={handleClick}>
+                <div className={menuIsOpen ? "line line1" : "line"} />
+                <div className={menuIsOpen ? "line line2" : "line"} />
+                <div className={menuIsOpen ? "line line3" : "line"} />
+            </div>
         </div>
     )
 }
 
-export default Hamburger;
+export default HamburgerButton;
+
