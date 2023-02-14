@@ -5,15 +5,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngular, faCss3, faReact, faGitAlt, faHtml5, faJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
 
+//This is the About component which requires a state variable letterClass
 const About = () => {
 
+    //initializes letterClass as text-animate
     const [letterClass, setLetterClass] = useState('text-animate');
 
+    //useEffect runs after the component renders and sets the letterClass to 'text-animate-hover' after 3000 ms 
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
     })
+
     
     return (
         <>
@@ -59,6 +63,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            {/* The page loader */}
             <Loader type="pacman"/>
         </>
         

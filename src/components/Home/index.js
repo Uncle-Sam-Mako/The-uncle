@@ -4,18 +4,23 @@ import AnimatedLetters from "../AnimatedLetters";
 import './index.scss';
 import Loader from 'react-loaders'
 import homeImg from '../../assets/images/home_img.png'
-import AnimatedLogo from "../AnimatedLogo";
 
 
 
 const Home = () => {
+    // State hook to store the value of letterClass, which can be passed to a styled component as a prop
     const [letterClass, setLetterClass] = useState('text-animate');
+
+    // Arrays to hold the values needed to render each letter of text.
     const nameArray = ['U','n','c','l','e',' ', 'S','a','m'];
     const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r'];
 
+    // Run the setTimeout function to update letterClass with the value 'text-animate-hover'
+    // This change will allow the component/text to interact with the hover animation 
+
     useEffect(() => {
         setTimeout(() => {
-            setLetterClass('text-animate-hover')
+            setLetterClass('text-animate-hover') ;
         }, 4000)
     })
     
@@ -44,6 +49,7 @@ const Home = () => {
                 </div>
                 
             </div>
+            {/* The page loader */}
             <Loader type="pacman"/>
         </>
     )

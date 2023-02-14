@@ -7,33 +7,38 @@ import AnimatedLogo from '../AnimatedLogo';
 
 
 
-const Contact = () => {
+// handle contact form submit action
+const sendMail = (e) => {
+    e.preventDefault();
 
-    const [letterClass, setLetterClass] = useState('text-animate');
-    const refForm = useRef()
-    
-    const sendMail = (e) => {
-        
-        e.preventDefault();
-        
-        // these IDs from the previous steps
-        emailjs.sendForm('service_vtvbp1l', 'template_saue0i7', refForm.current, 'X3nuAVol7mhODf1fU')
-            .then(function() {
-                alert('Message successfully sent!');
-                window.location.reload(false)
-            }, function(error) {
-                alert('Failed to send the message');
-            });
-   
+    // use emailjs.sendForm() to send the contact form data
+    emailjs.sendForm('service_vtvbp1l', 'template_saue0i7', refForm.current, 'X3nuAVol7mhODf1fU')
+
+        // show alert when message has been sent
+        .then(function() {
+            alert('Message successfully sent!');
+            window.location.reload(false)
+        }, 
+
+        // show alert if sent failed
+        function(error) {
+            alert('Failed to send the message');
+        });
     }
-    useEffect(() => {
-        setTimeout(() => {
-            setLetterClass('text-animate-hover')
-        }, 3000)
-    })
-    return (
-        <>
-            <div className="container contact-page">
+
+// add timeout to animate hover effect on contact link
+useEffect(() => {
+    setTimeout(() => {
+        setLetterClass('text-animate-hover')
+    }, 3000)
+})
+
+
+// Render component with container class of contact-page
+return (
+    <>
+        <div className="container contact-page">
+            {/* Render text-zone section with heading containing component AnimatedLetters which contains strArray and index set */}
                 <div className="text-zone">
                     <h1>
                         <AnimatedLetters
@@ -73,6 +78,7 @@ const Contact = () => {
                     <AnimatedLogo></AnimatedLogo>
                 </div>
             </div>
+            {/* THe page loader */}
             <Loader type="pacman"></Loader>
         </>
     )

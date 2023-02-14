@@ -7,9 +7,11 @@ import {faHome, faUser, faEnvelope, faCode, faBars} from '@fortawesome/free-soli
 import {faLinkedin, faGithub, faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
 
 
+// Sidebar component : Must take the states of its parent (Layout) in props.
 
 const Sidebar = ({menuIsOpen, setMenuIsOpen}) => {
-    
+    // Add an event listener to each `#nav-bar a` tag
+    // to toggle the menue when it is clicked
     document.querySelectorAll("#nav-bar a").forEach(elt => {
         elt.addEventListener('click', () => {
             setMenuIsOpen(!menuIsOpen);
@@ -17,7 +19,7 @@ const Sidebar = ({menuIsOpen, setMenuIsOpen}) => {
     })
     
 
-
+    // Return a div containing Links, NavLinks, and social media links
     return (
         <div id="nav-bar" className={`nav-bar ${ menuIsOpen ? "active" : "" }`}>
             <Link className="logo" to='/'>

@@ -12,18 +12,24 @@ import '@splidejs/react-splide/css';
 
 
 const Work = () => {
+    // useState hook to manage letterClass state 
     const [letterClass, setLetterClass] = useState('text-animate');
+
+    // useEffect hook to change letterClass after certain time : 
+    // We add the class 'text-animate-hover' to each letter after 3s
     useEffect(() => {
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
     })
+
     return (
         <>
             <div className='container work-page'>
                 <div className="text-zone">
                     <h1>
                         <AnimatedLetters
+                        // props for the components that feature animation 
                         letterClass={letterClass}
                         strArray={['M','y',' ','w','o','r','k']}
                         idx={15}
@@ -34,7 +40,7 @@ const Work = () => {
                     </p>
                 </div>
                 <div className="projects-container">
-                {/* project slide with splidejs*/}
+                {/* using Splide to feature a carousel of projects */}
                 <Splide
                     options={ {
                         rewind: false,
@@ -51,6 +57,7 @@ const Work = () => {
                         }
                     } }
                     >
+                    {/* slide item with project info and a link to view more */}
                     <SplideSlide>
                         <div className="project-item">
                             <div className="project-img">
@@ -59,42 +66,6 @@ const Work = () => {
                             <div className="project-text">
                                 <h3 className="project-title">
                                     Airbnb
-                                </h3>
-                                <p className="project-desc">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!
-                                </p>
-                            </div>
-                            <span className='view-project'>
-                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
-                            </span>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="project-item">
-                            <div className="project-img">
-                                <img src={Facebook} alt=""/>
-                            </div>
-                            <div className="project-text">
-                                <h3 className="project-title">
-                                    Facebook
-                                </h3>
-                                <p className="project-desc">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!
-                                </p>
-                            </div>
-                            <span className='view-project'>
-                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
-                            </span>
-                        </div>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <div className="project-item">
-                            <div className="project-img">
-                                <img src={Vinted} alt=""/>
-                            </div>
-                            <div className="project-text">
-                                <h3 className="project-title">
-                                    Vinted
                                 </h3>
                                 <p className="project-desc">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!

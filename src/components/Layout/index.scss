@@ -53,6 +53,7 @@
 
     h1 {
         
+        /* In this example, the font size is 1.5rem larger than the default value plus 3% of the viewport width. */
         font-size: calc(1.5rem + 3vw);
         font-family: 'Coolvetica';
         color: $secondary-color;
