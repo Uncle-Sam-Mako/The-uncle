@@ -42,8 +42,13 @@ const Work = () => {
                         gap   : '1rem',
                         type   : 'loop',
                         perPage: 4, 
-                        perMove : 1,
-                        pagination : false
+                        perMove : 1 ,
+                        pagination : false,
+                        breakpoints : {
+                            640 : {
+                                perPage : 2
+                            }
+                        }
                     } }
                     >
                     <SplideSlide>

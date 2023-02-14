@@ -79,3 +79,12 @@
         border-radius: 4px; 
     }
 }
+
+@media screen and (max-width : 1300px){
+    .contact-page {
+        display: block;
+        .animated-logo {
+            display: none;
+        }
+    }
+}

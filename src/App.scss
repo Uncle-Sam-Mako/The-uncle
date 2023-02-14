@@ -24,7 +24,9 @@ $primary-color : white;
 }
 
 body, html {
-  overflow: hidden;
+  width: 100vw;
+  overflow: hidden !important;
+  font-family: "Helvetica Neue";
 }
 
 img {
