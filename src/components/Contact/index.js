@@ -6,32 +6,33 @@ import emailjs from '@emailjs/browser';
 import AnimatedLogo from '../AnimatedLogo';
 
 
+const Contact = () => {
 
-// handle contact form submit action
-const sendMail = (e) => {
-    e.preventDefault();
+    // handle contact form submit action
+    const sendMail = (e) => {
+        e.preventDefault();
 
-    // use emailjs.sendForm() to send the contact form data
-    emailjs.sendForm('service_vtvbp1l', 'template_saue0i7', refForm.current, 'X3nuAVol7mhODf1fU')
+        // use emailjs.sendForm() to send the contact form data
+        emailjs.sendForm('service_vtvbp1l', 'template_saue0i7', refForm.current, 'X3nuAVol7mhODf1fU')
 
-        // show alert when message has been sent
-        .then(function() {
-            alert('Message successfully sent!');
-            window.location.reload(false)
-        }, 
+            // show alert when message has been sent
+            .then(function() {
+                alert('Message successfully sent!');
+                window.location.reload(false)
+            }, 
 
-        // show alert if sent failed
-        function(error) {
-            alert('Failed to send the message');
-        });
+            // show alert if sent failed
+            function(error) {
+                alert('Failed to send the message');
+            });
     }
 
-// add timeout to animate hover effect on contact link
-useEffect(() => {
-    setTimeout(() => {
-        setLetterClass('text-animate-hover')
-    }, 3000)
-})
+    // add timeout to animate hover effect on contact link
+    useEffect(() => {
+        setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 3000)
+    })
 
 
 // Render component with container class of contact-page
