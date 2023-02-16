@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngular, faCss3, faReact, faGitAlt, faHtml5, faJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
+import { useOutletContext } from 'react-router-dom';
 
 //This is the About component which requires a state variable letterClass
 const About = () => {
@@ -11,12 +12,19 @@ const About = () => {
     //initializes letterClass as text-animate
     const [letterClass, setLetterClass] = useState('text-animate');
 
-    //useEffect runs after the component renders and sets the letterClass to 'text-animate-hover' after 3000 ms 
+    // Get the SetPageTitle function from useOutletContext hook
+    const [setPageTitle] = useOutletContext() ;
+
+    //useEffect runs after the component renders
     useEffect(() => {
+        // invoke setPageTitle function to update the page title
+        setPageTitle('Uncle Sam | About Me')
+
+        // After 3 seconds add text-animate-hover class to letter 
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
-    })
+    });
 
     
     return (

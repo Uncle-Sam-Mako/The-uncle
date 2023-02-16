@@ -4,9 +4,19 @@ import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import AnimatedLogo from '../AnimatedLogo';
+import { useOutletContext } from 'react-router-dom';
 
 
 const Contact = () => {
+
+    // Declare a state called letterClass, which will store the string 'text-animate'
+    const [letterClass, setLetterClass] = useState('text-animate');
+    
+    // Get the SetPageTitle function from useOutletContext hook
+    const [setPageTitle] = useOutletContext();
+
+    // Create a reference to the form element
+    const refForm = useRef();
 
     // handle contact form submit action
     const sendMail = (e) => {
@@ -27,8 +37,12 @@ const Contact = () => {
             });
     }
 
-    // add timeout to animate hover effect on contact link
+    //useEffect runs after the component renders
     useEffect(() => {
+        // invoke setPageTitle function to update the page title
+        setPageTitle('Uncle Sam | Contact Me')
+
+        // After 3 seconds add text-animate-hover class to letter 
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)

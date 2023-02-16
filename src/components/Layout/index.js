@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Hamburger from '../Hamburger';
 import Sidebar from '../Sidebar';
 import './index.scss';
@@ -9,6 +9,16 @@ const Layout = () => {
 
     // This state keeps track of whether the menu is open or closed
     const [menuIsOpen, setMenuIsOpen] = useState(false); 
+
+    // Use useState and useEffect hooks 
+    // to set the page title whenever it changes 
+    const [pageTitle, setPageTitle] = useState('Uncle Sam | Front-end web developer');
+    
+    useEffect(() => {
+        // Set the actual page title on the browser window 
+        document.title = pageTitle;
+    }, [pageTitle])
+    
 
     return (
         <div className="app">
@@ -22,7 +32,7 @@ const Layout = () => {
                 <span className="tags top-tags">&lt;body&gt;</span>
     
                 {/* Outlet component for dynamic routing */}
-                <Outlet></Outlet>
+                <Outlet context={[setPageTitle]}></Outlet>
     
                 {/* Decorative Closing HTML Tags */}
                 <span className="tags bottom-tags">&lt;/body&gt;

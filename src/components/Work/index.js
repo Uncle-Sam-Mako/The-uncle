@@ -1,23 +1,32 @@
 import Loader from 'react-loaders';
-import Airbnb from '../../assets/images/airbnb.jpg';
-import Facebook from '../../assets/images/facebook.jpg'
-import Vinted from '../../assets/images/vinted.png'
-import Uber from '../../assets/images/uber.png';
-import Tripadvisor from '../../assets/images/trip-advisor.jpg'
+import wikifilm from '../../assets/images/wikifilm.png';
+import rhoe from '../../assets/images/rhoe.png'
+import the_uncle from '../../assets/images/the_uncle.png'
+import inzu from '../../assets/images/inzu.png';
+import uncle from '../../assets/images/uncle.png'
 import { useEffect, useRef, useState } from 'react';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
+import { useOutletContext } from 'react-router-dom';
 
 
 const Work = () => {
     // useState hook to manage letterClass state 
     const [letterClass, setLetterClass] = useState('text-animate');
 
+    // Get the SetPageTitle function from useOutletContext hook
+    const [setPageTitle] = useOutletContext();
+
     // useEffect hook to change letterClass after certain time : 
     // We add the class 'text-animate-hover' to each letter after 3s
     useEffect(() => {
+
+        // invoke setPageTitle function to update the page title
+        setPageTitle('Uncle Sam | Look at My work')
+
+        // After 3 seconds add text-animate-hover class to letter 
         setTimeout(() => {
             setLetterClass('text-animate-hover')
         }, 3000)
@@ -51,6 +60,9 @@ const Work = () => {
                         perMove : 1 ,
                         pagination : false,
                         breakpoints : {
+                            992 : {
+                                perPage : 3
+                            },
                             640 : {
                                 perPage : 2
                             }
@@ -61,11 +73,11 @@ const Work = () => {
                     <SplideSlide>
                         <div className="project-item">
                             <div className="project-img">
-                                <img src={Airbnb} alt=""/>
+                                <img src={wikifilm} alt=""/>
                             </div>
                             <div className="project-text">
                                 <h3 className="project-title">
-                                    Airbnb
+                                    Wikifilm
                                 </h3>
                                 <p className="project-desc">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!
@@ -79,11 +91,11 @@ const Work = () => {
                     <SplideSlide>
                         <div className="project-item">
                             <div className="project-img">
-                                <img src={Uber} alt=""/>
+                                <img src={inzu} alt=""/>
                             </div>
                             <div className="project-text">
                                 <h3 className="project-title">
-                                    Uber Eats
+                                    Inzu 
                                 </h3>
                                 <p className="project-desc">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!
@@ -97,11 +109,47 @@ const Work = () => {
                     <SplideSlide>
                         <div className="project-item">
                             <div className="project-img">
-                                <img src={Tripadvisor} alt=""/>
+                                <img src={uncle} alt=""/>
                             </div>
                             <div className="project-text">
                                 <h3 className="project-title">
-                                    Trip advisor
+                                    Uncle Portofolio
+                                </h3>
+                                <p className="project-desc">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!
+                                </p>
+                            </div>
+                            <span className='view-project'>
+                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
+                            </span>
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="project-item">
+                            <div className="project-img">
+                                <img src={the_uncle} alt=""/>
+                            </div>
+                            <div className="project-text">
+                                <h3 className="project-title">
+                                    The Uncle
+                                </h3>
+                                <p className="project-desc">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!
+                                </p>
+                            </div>
+                            <span className='view-project'>
+                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
+                            </span>
+                        </div>
+                    </SplideSlide>
+                    <SplideSlide>
+                        <div className="project-item">
+                            <div className="project-img">
+                                <img src={rhoe} alt=""/>
+                            </div>
+                            <div className="project-text">
+                                <h3 className="project-title">
+                                    Rhoe
                                 </h3>
                                 <p className="project-desc">
                                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores debitis amet distinctio recusandae labore sequi rem doloremque dicta non illum!
