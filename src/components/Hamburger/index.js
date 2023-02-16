@@ -1,5 +1,5 @@
 import './index.scss'
-import React, { useState } from 'react';
+import React from 'react';
 
 
 
@@ -15,7 +15,7 @@ const HamburgerButton = ({menuIsOpen, setMenuIsOpen}) => {
 
     return (
         <div className="hamburger-container">
-            // This div handles the click event with handleClick() as it's callback.
+            {/* This div handles the click event with handleClick() as it's callback. */}
             <div id="hamburger-button" className="hamburger-button" onClick={handleClick}> 
                 <div className={menuIsOpen ? "line line1" : "line"} />
                 <div className={menuIsOpen ? "line line2" : "line"} />

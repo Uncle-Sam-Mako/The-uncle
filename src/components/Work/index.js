@@ -4,7 +4,7 @@ import rhoe from '../../assets/images/rhoe.png'
 import the_uncle from '../../assets/images/the_uncle.png'
 import inzu from '../../assets/images/inzu.png';
 import uncle from '../../assets/images/uncle.png'
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
@@ -84,7 +84,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -102,7 +102,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -120,7 +120,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -138,7 +138,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -156,7 +156,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
                             </span>
                         </div>
                     </SplideSlide>

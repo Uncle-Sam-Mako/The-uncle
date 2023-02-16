@@ -2,7 +2,7 @@ import './index.scss';
 import AnimatedLetters from '../AnimatedLetters';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngular, faCss3, faReact, faGitAlt, faHtml5, faJs, faJsSquare } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faCss3, faReact, faGitAlt, faHtml5, faJsSquare } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
 import { useOutletContext } from 'react-router-dom';
 

@@ -1,9 +1,9 @@
 import './index.scss';
-import React, { useState } from 'react';
+import React from 'react';
 import Logo from '../../assets/images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faHome, faUser, faEnvelope, faCode, faBars} from '@fortawesome/free-solid-svg-icons'
+import {faHome, faUser, faEnvelope, faCode} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub, faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
 
 
