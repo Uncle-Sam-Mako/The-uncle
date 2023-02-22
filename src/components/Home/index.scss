@@ -1,10 +1,31 @@
 @import '../../variables';
 
 
+
+
+@keyframes logoAnim {
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dashoffset: -50%;
+    }
+
+    75% {
+        stroke-dashoffset: 20%;
+    }
+
+    100% {
+        stroke-dashoffset: 100%;
+    }
+
+}
+
 .home-page {
 
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr;
     grid-template-rows: 100% ;
     align-items: center;
     .text-animate-hover:hover {
@@ -13,12 +34,58 @@
 
 
     .text-zone {
-        h1 {
-            color: #fff;
-            font-size: calc(2rem + 2vw);
-            margin: 0;
-            font-family: "Helvetica Neue";
-            font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+
+        svg {
+            display: block;
+            position: relative;
+            width: 100%;
+            
+            path {
+                stroke : white;
+                stroke-width: 2;
+                filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
+                fill : $secondary-color;
+                animation: logoAnim 5s ease-in-out infinite;
+
+                &:nth-child(1) {
+                    stroke-dasharray: 553.3744506835938;
+                    stroke-dashoffset: 553.3744506835938;
+                        
+                } 
+                &:nth-child(2) {
+                    stroke-dasharray: 295.2279052734375;
+                    stroke-dashoffset: 295.2279052734375;
+                } 
+                &:nth-child(3) {
+                    stroke-dasharray: 221.4600830078125;
+                    stroke-dashoffset: 221.4600830078125;
+                } 
+                &:nth-child(4) {
+                    stroke-dasharray: 383.05059814453125;
+                    stroke-dashoffset: 383.05059814453125;
+                } 
+                &:nth-child(5) {
+                    stroke-dasharray: 230.0675048828125;
+                    stroke-dashoffset: 230.0675048828125;
+                }
+                &:nth-child(6) {
+                    stroke-dasharray: 442.94586181640625;
+                    stroke-dashoffset: 442.94586181640625;
+                }  
+                &:nth-child(7) {
+                    stroke-dasharray: 271.531982421875;
+                    stroke-dashoffset: 271.531982421875;
+                } 
+                &:nth-child(8) {
+                    stroke-dasharray: 385.7425842285156;
+                    stroke-dashoffset: 385.7425842285156;
+                } 
+            }
             &::before{
                 content: "<h1>";
                 font-family: "La Belle Aurore";
@@ -41,8 +108,17 @@
                 opacity: 0.6;
             }
         }
-    
+
         h2 {
+            color: white;
+            font-family: 'Pacifico';
+            font-size: 3.5em;
+            font-weight: 200;
+            align-self: flex-start;
+            transform: translateY(30px);
+        }
+    
+        h3 {
             color: #8d8d8d;
             margin-top: 20px;
             font-weight: 400;
@@ -75,51 +151,16 @@
     
         }
     }
-
-    .home-img-container {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        justify-self: flex-end;
-
-        .home-img {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: calc(100vh - 100%);
-            
-           img {
-                object-fit: contain;
-                max-height: 100%;
-                display: block;
-                opacity: 0;
-                transform: translateY(-150px);
-                filter: drop-shadow(0px 0px 0 lighten($primary-color, 10%));
-                animation : fadeInUp 2s forwards 3s, dropShadow 2s forwards 6s;
-            }
-
-        }
-    }
-}
-
-@keyframes dropShadow {
-    to {
-        filter: drop-shadow(25px 10px 0 lighten($primary-color, 10%));
-    }
 }
 
 
-@media screen and (max-width : 1300px){
-    .home-page  {
-        grid-template-columns: 1fr;
 
-        h1 {
-            font-size: calc(2rem + 3vw);
-        }
+// @media screen and (max-width : 1300px){
+//     .home-page  {
+//         grid-template-columns: 1fr;
 
-        .home-img-container, 
-        .animated-logo-container{
-            display: none;
-        }
-    }
-}
+//         h1 {
+//             font-size: calc(2rem + 3vw);
+//         }
+//     }
+// }
