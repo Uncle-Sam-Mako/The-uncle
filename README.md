@@ -1,6 +1,7 @@
 # Uncle Sam Portofolio
 
-This modern web portfolio template is built with ReactJS and designed to showcase your work in a sleek, professional way. With its intuitive design and easy-to-use features, you can quickly create an impressive online presence that will help you stand out from the crowd. Whether you're a freelancer, small business owner, or creative professional, this template will help you make a lasting impression.
+This modern web portfolio is built with ReactJS and designed to showcase my work in a sleek, professional way. With its intuitive design and easy-to-use features, I can quickly create an impressive online presence that will help me stand out from the crowd. 
+
 
 # Getting Started with Create React App
 
