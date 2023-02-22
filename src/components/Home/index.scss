@@ -3,21 +3,16 @@
 
 
 
-@keyframes logoAnim {
-    25% {
+@keyframes uncleSamStroke {
+    to {
         stroke-dashoffset: 0;
     }
 
-    50% {
-        stroke-dashoffset: -50%;
-    }
+}
 
-    75% {
-        stroke-dashoffset: 20%;
-    }
-
-    100% {
-        stroke-dashoffset: 100%;
+@keyframes uncleSamFill {
+    to {
+        fill : $secondary-color;
     }
 
 }
@@ -44,13 +39,19 @@
             display: block;
             position: relative;
             width: 100%;
+
+            @for $i from 1 through 8 {
+                path:nth-child(#{$i}) {
+                    animation-delay: #{2 + $i}s;
+                }
+            }
             
             path {
                 stroke : white;
                 stroke-width: 2;
                 filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
-                fill : $secondary-color;
-                animation: logoAnim 5s ease-in-out infinite;
+                fill : transparent;
+                animation: uncleSamStroke 2s ease-in-out infinite alternate, uncleSamFill 2s forwards ease-out;;
 
                 &:nth-child(1) {
                     stroke-dasharray: 553.3744506835938;
