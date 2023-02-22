@@ -63,7 +63,7 @@ return (
                         />
                     </h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi in, maxime totam reprehenderit facere soluta esse. Explicabo hic ab, autem nobis commodi incidunt voluptatem eaque?
+                    If you are interested in working with me or have any questions, please feel free to contact me. I am always willing to discuss new projects and opportunities. You can reach me via email by filling out the form below. I look forward to hearing from you!
                     </p>
                     <div className="contact-form">
                         <form ref={refForm} onSubmit={sendMail}>

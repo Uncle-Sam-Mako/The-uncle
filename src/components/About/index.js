@@ -39,13 +39,13 @@ const About = () => {
                         />
                     </h1>
                     <p className='paragraph_1'>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum voluptate blanditiis maiores animi delectus itaque distinctio temporibus voluptatem, unde velit pariatur aut nostrum impedit quisquam eveniet dolore laudantium commodi fuga?
+                        I'm a web developer with a passion for creating innovative, user-friendly websites and applications. With over 5 years of experience in the field, I have developed a wide range of websites and applications using HTML, CSS, JavaScript, Python, ReactJS, PostgreSQL and other web technologies.                     
                     </p>
                     <p className='paragraph_2'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veniam dignissimos est, corporis ab magni id dolores minus, ipsum amet magnam, tempora reprehenderit! Doloremque modi quasi beatae corporis, ut alias.
+                        I am highly organized and detail-oriented with excellent problem solving skills. My goal is to create websites that are both visually appealing and functionally sound. 
                     </p>
                     <p className='paragraph_3'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veniam dignissimos est, corporis. modi quasi beatae corporis, ut alias.
+                        I strive to stay up to date with the latest web development trends and technologies in order to provide my clients with the best possible solutions.
                     </p>
                 </div>
                 <div className="stage-cube-container">
