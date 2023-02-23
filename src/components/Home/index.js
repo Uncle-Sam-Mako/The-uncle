@@ -26,8 +26,6 @@ const Home = () => {
                     <Link to="/contact" className="flat-button">CONTACT ME</Link>
                 </div>
             </div>
-            {/* The page loader */}
-            <Loader type="pacman"/>
         </>
     )
 }

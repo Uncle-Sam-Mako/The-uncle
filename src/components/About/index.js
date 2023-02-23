@@ -71,8 +71,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            {/* The page loader */}
-            <Loader type="pacman"/>
+
         </>
         
     )

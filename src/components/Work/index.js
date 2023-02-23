@@ -165,8 +165,6 @@ const Work = () => {
                     
                 </div>
             </div>
-            {/* Loader from react-loaders*/}
-            <Loader type="pacman"/>
         </>
     )
 }

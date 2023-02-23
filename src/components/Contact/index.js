@@ -93,8 +93,6 @@ return (
                     <AnimatedLogo></AnimatedLogo>
                 </div>
             </div>
-            {/* THe page loader */}
-            <Loader type="pacman"></Loader>
         </>
     )
 }
