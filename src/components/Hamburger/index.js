@@ -8,7 +8,11 @@ const HamburgerButton = ({menuIsOpen, setMenuIsOpen}) => {
 
     // This function toggles between open and closed for the hamburger menu
     const handleClick = () => {
-        setMenuIsOpen(!menuIsOpen);
+        
+        setMenuIsOpen((prevState, props) => {
+            return {menuIsOpen: !prevState.menuIsOpen};
+        });
+        
         document.getElementById('hamburger-button').classList.toggle('open');
         document.getElementById('nav-bar').classList.toggle('active');
     };

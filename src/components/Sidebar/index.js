@@ -10,13 +10,15 @@ import {faLinkedin, faGithub, faTwitter, faFacebook} from '@fortawesome/free-bra
 // Sidebar component : Must take the states of its parent (Layout) in props.
 
 const Sidebar = ({menuIsOpen, setMenuIsOpen}) => {
+
     // Add an event listener to each `#nav-bar a` tag
-    // to toggle the menue when it is clicked
-    document.querySelectorAll("#nav-bar a").forEach(elt => {
-        elt.addEventListener('click', () => {
+    // to toggle the menu when it is clicked
+    document.addEventListener('click', e => {
+        if (e.target.closest('#nav-bar')) {
             setMenuIsOpen(!menuIsOpen);
-        })
-    })
+        }
+    });
+    
     
 
     // Return a div containing Links, NavLinks, and social media links
