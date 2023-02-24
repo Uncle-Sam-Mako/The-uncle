@@ -48,10 +48,10 @@
             
             path {
                 stroke : white;
-                stroke-width: 2;
+                stroke-width: 1;
                 filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5));
-                fill : transparent;
-                animation: uncleSamStroke 2s ease-in-out infinite alternate, uncleSamFill 2s forwards ease-out;;
+                fill : $secondary-color;
+                animation: uncleSamStroke 2s ease-in-out forwards;
 
                 &:nth-child(1) {
                     stroke-dasharray: 553.3744506835938;

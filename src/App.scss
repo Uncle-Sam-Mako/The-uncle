@@ -6,22 +6,20 @@ $primary-color : white;
 
 @font-face {
   font-family: "Helvetica Neue";
+  font-display: swap;
   src: url("assets/fonts/helvetica/HelveticaNeue\ Medium.ttf");
 }
 
 @font-face {
   font-family: "Pacifico";
+  font-display: swap;
   src: url("assets/fonts/Pacifico-Regular.ttf");
 }
 
 @font-face {
   font-family: "La Belle Aurore";
+  font-display: swap;
   src: url("assets/fonts/LaBelleAurore-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Coolvetica";
-  src: url("assets/fonts/coolvetica_rg.ttf");
 }
 
 * {
