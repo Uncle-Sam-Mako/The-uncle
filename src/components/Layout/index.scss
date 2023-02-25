@@ -96,7 +96,7 @@
 
         @for $i from 1 through 35 {
             &.paragraph_#{$i} {
-                animation-delay: #{1+$i/10}s;
+                animation-delay: calc(1 + $i / 10)s;
             }
         }
     }
