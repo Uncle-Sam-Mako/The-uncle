@@ -1,6 +1,9 @@
 
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
+
+
 
 module.exports = {
   output: {
@@ -9,8 +12,15 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "public/index.html", // to import index.html file inside index.js
+      template: path.join(__dirname, "public", "index.html"), // to import index.html file inside index.js
     }),
+    new webpack.ProvidePlugin({ // <-- this plugin makes React available as a global variable, so you don't need to import it in every file  
+      React : 'react',
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    })
+    
   ],
   devServer: {
     port: 3030, // you can change the port
@@ -22,6 +32,9 @@ module.exports = {
         exclude: /node_modules/, // excluding the node_modules folder
         use: {
           loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
         },
       },
       {
