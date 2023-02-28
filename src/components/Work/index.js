@@ -65,6 +65,9 @@ const Work = () => {
                             },
                             640 : {
                                 perPage : 2
+                            },
+                            480 : {
+                                perPage : 1
                             }
                         }
                     } }
