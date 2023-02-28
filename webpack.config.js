@@ -2,7 +2,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const WorkboxPlugin = require('workbox-webpack-plugin');
+const {InjectManifest} = require('workbox-webpack-plugin');
+
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 
@@ -32,17 +33,27 @@ module.exports = (env, argv) => {
           env: { NODE_ENV: JSON.stringify('production') } 
       } 
     }),
-    new WorkboxPlugin.GenerateSW({
-        // these options encourage the ServiceWorkers to get in there fast
-        // and not allow any straggling "old" SWs to hang around
-        clientsClaim: true,
-        skipWaiting: true,
-        maximumFileSizeToCacheInBytes: 5000000
+    // new WorkboxPlugin.GenerateSW({
+    //     // these options encourage the ServiceWorkers to get in there fast
+    //     // and not allow any straggling "old" SWs to hang around
+    //     clientsClaim: true,
+    //     skipWaiting: true,
+    //     maximumFileSizeToCacheInBytes: 5000000
+    // }),
+    new InjectManifest({
+      swSrc : "./src/service-worker.js",
+      swDest : "sw.js"
     }),
     new CopyWebpackPlugin({
       patterns : [
-      { from: 'public/images', to: 'images' },
-      { from: 'public/manifest', to: 'manifest' }
+        { from: 'public/favicon.ico', to: '' },
+        { from: 'public/favicon-32x32.png', to: '' },
+        { from: 'public/favicon-16x16.png', to: '' },
+        { from: 'public/android-chrome-192x192.png', to: '' },
+        { from: 'public/android-chrome-512x512.png', to: '' },
+        { from: 'public/apple-touch-icon.png', to: '' },
+        { from: 'public/maskable_icon_x192.png', to: '' },
+        { from: 'public/manifest.json', to: '' }
     ]}),
     new webpack.HotModuleReplacementPlugin()
   ],
