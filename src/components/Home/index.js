@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import './index.scss';
+import React from 'react';
 import Loader from 'react-loaders'
 
 
@@ -8,7 +9,7 @@ import Loader from 'react-loaders'
 const Home = () => {
     
     return (
-        <>
+        <React.Fragment>
             <div className="container home-page">
                 <div className="text-zone">
                     <h2 className="greet__hello">Hello world! I'm</h2>
@@ -26,7 +27,9 @@ const Home = () => {
                     <Link to="/contact" className="flat-button">CONTACT ME</Link>
                 </div>
             </div>
-        </>
+        </React.Fragment>
+            
+        
     )
 }
 

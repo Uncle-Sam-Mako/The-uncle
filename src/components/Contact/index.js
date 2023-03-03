@@ -1,11 +1,13 @@
 import './index.scss';
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters';
-import { useEffect, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import AnimatedLogo from '../AnimatedLogo';
+import { lazy, useEffect, useRef, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
+
+
+//Dynamic Import
+const AnimatedLogo = lazy(() => import('../AnimatedLogo'));
 
 const Contact = () => {
 
@@ -23,8 +25,8 @@ const Contact = () => {
         e.preventDefault();
 
         // use emailjs.sendForm() to send the contact form data
-        emailjs.sendForm('service_vtvbp1l', 'template_saue0i7', refForm.current, 'X3nuAVol7mhODf1fU')
-
+        import('@emailjs/browser').then(emailjs => {
+            emailjs.sendForm('service_vtvbp1l', 'template_saue0i7', refForm.current, 'X3nuAVol7mhODf1fU')
             // show alert when message has been sent
             .then(function() {
                 alert('Message successfully sent!');
@@ -35,6 +37,7 @@ const Contact = () => {
             function(error) {
                 alert('Failed to send the message');
             });
+        })
     }
 
     //useEffect runs after the component renders
