@@ -130,6 +130,7 @@
         }
     
         .flat-button{
+            background-color: $primary-color;
             color: $secondary-color;
             font-size: 13px;
             font-weight: 400;
@@ -138,15 +139,26 @@
             text-decoration: none;
             padding: 10px 18px;
             border: 1px solid $secondary-color;
+            border-radius: 10px;
             margin-top: 25px;
             float: left;
             animation: fadeIn 1s 1.5s backwards;
             white-space: nowrap;
             transition: .6s;
-    
+            display: flex;
+            cursor: pointer;
+
+            .icon {
+                margin: 0 5px;
+            }
+
             &:hover {
                 background: $secondary-color;
-                color : #333;
+                color : $primary-color;
+
+                svg path {
+                    fill : $primary-color;
+                }
     
             }
     
