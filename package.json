@@ -21,6 +21,7 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.35.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -58,9 +59,9 @@
     "dotenv-webpack": "^8.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
-    "sass": "^1.58.3",
     "sass-loader": "^13.2.0",
     "style-loader": "^3.3.1",
+    "unused-files-webpack-plugin": "^3.4.0",
     "url-loader": "^4.1.1",
     "webpack": "^5.75.0",
     "webpack-bundle-analyzer": "^4.8.0",
