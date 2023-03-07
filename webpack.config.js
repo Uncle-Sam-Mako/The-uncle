@@ -75,7 +75,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.(sa|sc|c)ss$/, // styles files
-          use: ["style-loader", "sass-loader"],
+          use: ["style-loader", "sass-loader", "css-loader"],
           
         },
         {
