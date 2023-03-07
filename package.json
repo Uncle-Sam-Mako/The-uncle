@@ -14,6 +14,7 @@
     "animate.css": "^4.1.1",
     "gsap-trial": "^3.11.4",
     "loaders.css": "^0.1.2",
+    "lodash": "^4.17.21",
     "prettier": "^2.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,6 +22,7 @@
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
+    "remove": "^0.1.5",
     "sass": "^1.35.1",
     "web-vitals": "^2.1.4"
   },
@@ -68,5 +70,8 @@
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
     "workbox-webpack-plugin": "^6.5.4"
+  },
+  "resolutions": {
+    "mini-css-extract-plugin": "2.4.5"
   }
 }

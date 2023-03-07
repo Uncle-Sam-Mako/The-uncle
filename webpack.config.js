@@ -3,7 +3,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const {InjectManifest} = require('workbox-webpack-plugin');
-
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 
@@ -14,9 +13,10 @@ module.exports = (env, argv) => {
   const MODE = argv.mode || 'development';
 
   return {
+    
     output: {
       path: path.join(__dirname, "/dist"), // the bundle output path
-      filename: "bundle.js", // the name of the bundle
+      filename: '[name].bundle.js', // the name of the bundle
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -55,7 +55,8 @@ module.exports = (env, argv) => {
           { from: 'public/maskable_icon_x192.png', to: '' },
           { from: 'public/manifest.json', to: '' }
       ]}),
-      new webpack.HotModuleReplacementPlugin()
+
+      new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
       port: 3030, // you can change the port
@@ -75,6 +76,7 @@ module.exports = (env, argv) => {
         {
           test: /\.(sa|sc|c)ss$/, // styles files
           use: ["style-loader", "css-loader", "sass-loader"],
+          
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,

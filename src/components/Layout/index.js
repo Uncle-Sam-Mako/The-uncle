@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-import Hamburger from '../Hamburger';
-import Sidebar from '../Sidebar';
+import React, { lazy, useState, useEffect } from 'react';
 import './index.scss';
 
+//Dynamic import
+const Hamburger = lazy(() => import('../Hamburger'))
+const Sidebar = lazy(() => import('../Sidebar'))
 
 const Layout = () => {
 

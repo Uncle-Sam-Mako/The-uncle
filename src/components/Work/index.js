@@ -12,6 +12,7 @@ import '@splidejs/react-splide/css';
 import { useOutletContext } from 'react-router-dom';
 
 
+
 const Work = () => {
     // useState hook to manage letterClass state 
     const [letterClass, setLetterClass] = useState('text-animate');
