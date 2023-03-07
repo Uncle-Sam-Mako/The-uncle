@@ -1,4 +1,3 @@
-import Loader from 'react-loaders';
 import wikifilm from '../../assets/images/wikifilm.png';
 import rhoe from '../../assets/images/rhoe.png'
 import the_uncle from '../../assets/images/the_uncle.png'

@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import './index.scss';
 import React from 'react';
-import Loader from 'react-loaders'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 

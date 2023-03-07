@@ -1,5 +1,4 @@
 import './index.scss';
-import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters';
 import { lazy, useEffect, useRef, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
