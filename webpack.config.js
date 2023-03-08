@@ -3,6 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const {InjectManifest} = require('workbox-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const Dotenv = require('dotenv-webpack');
 const webpack = require('webpack');
 
@@ -57,6 +58,7 @@ module.exports = (env, argv) => {
       ]}),
 
       new webpack.HotModuleReplacementPlugin(),
+      new MiniCssExtractPlugin()
     ],
     devServer: {
       port: 3030, // you can change the port
@@ -75,7 +77,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.(sa|sc|c)ss$/, // styles files
-          use: ["style-loader", "sass-loader", "css-loader"],
+          use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
           
         },
         {
@@ -87,6 +89,5 @@ module.exports = (env, argv) => {
         }
       ],
     },
-    
   }
 }

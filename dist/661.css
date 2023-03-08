@@ -1,0 +1,1 @@
+#logo{animation:logoFill 3s ease forwards 3s;stroke:#fff;fill:transparent}#logo path{animation:logoAnim ease forwards 3s 6s;stroke-dasharray:1383.4357910156;stroke-dashoffset:1383.4357910156}@keyframes logoAnim{to{stroke-dashoffset:0;fill:#668fff}}
