@@ -59,6 +59,12 @@
             &.reactjs {
                 width: 65%;
             }
+            &.python {
+                width: 65%;
+            }
+            &.flask {
+                width: 50%;
+            }
         }
         
         .tooltip {
@@ -87,7 +93,7 @@
         }
 
     }
-    @for $i from 1 through 6 {
+    @for $i from 1 through 10 {
         .skill-box:nth-child(#{$i}) .skill-per {
             animation-delay: #{1 + $i / 5}s
         }  

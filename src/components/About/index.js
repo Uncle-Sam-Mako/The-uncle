@@ -90,6 +90,22 @@ const About = () => {
                 </span>
               </div>
             </div>
+            <div className="skill-box">
+              <span className="title">Python</span>
+              <div className="skill-bar">
+                <span className="skill-per python">
+                  <span className="tooltip">65%</span>
+                </span>
+              </div>
+            </div>
+            <div className="skill-box">
+              <span className="title">Flask</span>
+              <div className="skill-bar">
+                <span className="skill-per flask">
+                  <span className="tooltip">50%</span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </>
