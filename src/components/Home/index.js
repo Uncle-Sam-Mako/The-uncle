@@ -2,13 +2,14 @@ import './index.scss';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import Resume from '../../assets/docs/my_resume.pdf'
 
 
 
 const Home = () => {
 
     const downloadResume = () => {
-        fetch('my_resume.pdf').then(response => {
+        fetch(Resume).then(response => {
             response.blob().then(blob => {
                 const FILE_URL = window.URL.createObjectURL(blob);
                 let alink = document.createElement('a');
