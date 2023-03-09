@@ -101,7 +101,7 @@
         }
     }
 
-    ul {
+    ul.social_links {
 
         display: block;
         padding: 0;
@@ -113,7 +113,7 @@
             a {
                 padding: 7px 0;
                 display: block;
-                font-size : 15px;
+                font-size : 2.5em;
                 line-height: 16px;
                 color: #4d4d4e;
 
@@ -135,6 +135,11 @@
         &.active {
             opacity: 1;
             z-index : 99;
+        }
+
+        ul.social_links {
+            display: flex;
+            gap: 20px;
         }
     }
 }

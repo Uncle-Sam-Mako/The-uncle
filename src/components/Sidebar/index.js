@@ -4,7 +4,7 @@ import Logo from '../../assets/images/logo.png';
 import { Link, NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faHome, faUser, faPhone, faCode} from '@fortawesome/free-solid-svg-icons'
-import {faLinkedin, faGithub, faTwitter, faFacebook} from '@fortawesome/free-brands-svg-icons'
+import {faLinkedin, faGithub, faTwitter, faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 
 // Sidebar component : Must take the states of its parent (Layout) in props.
@@ -41,25 +41,25 @@ const Sidebar = ({menuIsOpen, setMenuIsOpen}) => {
                      <FontAwesomeIcon icon={faCode} color="#4d4d4e" ></FontAwesomeIcon>
                 </NavLink>
             </nav>
-            <ul>
+            <ul className='social_links'>
                 <li>
-                    <a target="_blank" rel='noreferrer' href="https://www.google.com">
+                    <a target="_blank" rel='noreferrer' href="https://www.linkedin.com/in/samuel-mako-0ab850187/">
                         <FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" rel='noreferrer' href="https://www.google.com">
+                    <a target="_blank" rel='noreferrer' href="https://github.com/Uncle-Sam-Mako">
                         <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" rel='noreferrer' href="https://www.google.com">
+                    <a target="_blank" rel='noreferrer' href="https://twitter.com/SBwemere">
                         <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
                     </a>
                 </li>
                 <li>
-                    <a target="_blank" rel='noreferrer' href="https://www.google.com">
-                        <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
+                    <a target="_blank" rel='noreferrer' href="https://www.instagram.com/samuelmako/">
+                        <FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon>
                     </a>
                 </li>
             </ul>

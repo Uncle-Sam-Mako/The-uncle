@@ -28,6 +28,7 @@
     left: 120px;
     font-size: 18px;
     font-family: 'La Belle Aurore';
+    z-index: -1;
 }
 
 .bottom-tag-html {
@@ -72,6 +73,7 @@
             left: -10px;
             opacity: 0.6;
             line-height: 18px;
+            z-index: -1;
         }
 
         &::after {
@@ -84,6 +86,7 @@
             bottom : -20px;
             opacity: 0.6;
             line-height: 18px;
+            z-index: -1;
         }
     }
 
@@ -118,8 +121,8 @@
 
 @media screen and (max-width : 1300px){
     .container {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
 
