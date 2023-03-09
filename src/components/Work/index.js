@@ -88,7 +88,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://uncle-sam-mako.github.io/Wikifilm/">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -106,7 +106,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://uncle-sam-mako.github.io/Inzu/">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -124,7 +124,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://uncle-sam-portfolio.netlify.app/">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -142,7 +142,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="#">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
@@ -160,7 +160,7 @@ const Work = () => {
                                 </p>
                             </div>
                             <span className='view-project'>
-                                <a target='_blank' rel="noreferrer" href="https://github.com/Uncle-Sam-Mako">View project</a>
+                                <a target='_blank' rel="noreferrer" href="https://uncle-sam-mako.github.io/Plum">View project</a>
                             </span>
                         </div>
                     </SplideSlide>
