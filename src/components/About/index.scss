@@ -46,17 +46,6 @@
             border-radius: 6px;
             animation: progress 1s ease-in-out forwards;
             opacity: 0;
-        }
-
-        .skill-bar .skill-per {
-            position: relative;
-            display: block;
-            height: 100%;
-            width: 90%;
-            background: $secondary-color;
-            border-radius: 6px;
-            animation: progress 1s ease-in-out forwards;
-            opacity: 0;
 
             &.html {
                 width: 90%;
@@ -71,11 +60,7 @@
                 width: 65%;
             }
         }
-        @for $i from 1 through 5 {
-            .skill-bar .skill-per:nth-child(#{$i}) {
-                animation-delay: #{1 + $i / 10}s
-            }
-        }
+        
         .tooltip {
             position: absolute;
             right: -14px;
@@ -101,7 +86,13 @@
             }
         }
 
-    }    
+    }
+    @for $i from 1 through 6 {
+        .skill-box:nth-child(#{$i}) .skill-per {
+            animation-delay: #{1 + $i / 5}s
+        }  
+    } 
+      
 }
 
 @keyframes progress {
