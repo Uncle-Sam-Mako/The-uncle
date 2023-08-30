@@ -102,7 +102,7 @@ const Work = () => {
                                     Inzu 
                                 </h3>
                                 <p className="project-desc">
-                                    Inzu is a modern real estate website template that offers an easy and efficient way to find the perfect home. Users can quickly and easily browse thousands of properties in their area. From single family homes to luxury condos, Inzu has something for everyone. 
+                                    Inzu is a modern real estate website template that offers an easy and efficient way to find the perfect home. Users can quickly and easily browse thousands of properties in their area. From single family homes to luxury condos, Inzu has something for everyone.
                                 </p>
                             </div>
                             <span className='view-project'>
