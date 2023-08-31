@@ -2,7 +2,7 @@
 $primary-color : white;
 
 @import 'animate.css';
-@import '~loaders.css/src/animations/pacman.scss';
+@import '~loaders.css/src/animations/ball-pulse-sync.scss';
 
 @font-face {
   font-family: "Helvetica Neue";
@@ -49,7 +49,7 @@ textarea {
   margin: 0;
   top: 50%;
   bottom: 0;
-  width: 50px;
+  width: 100px;
   height: 50px;
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;

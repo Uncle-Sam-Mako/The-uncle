@@ -15,7 +15,7 @@ function App() {
   return (
     <>
       {/* setup routes */}
-      <Suspense fallback={<Loader type="pacman"></Loader>}>
+      <Suspense fallback={<Loader type="ball-pulse-sync"></Loader>}>
           <Routes>
             {/* primary route with Layout Component used */}
             <Route path="/" element={<Layout />}>
